@@ -15,8 +15,8 @@ sorteoRoutes.get("/:id", async (req, res) => {
 
 sorteoRoutes.post("/create", async (req, res) => {
     try{
-        const { seleccion, dni } = req.body; // Asegúrate de obtener correctamente los valores
-        const nuevaSorteo = await sorteoDB.create({ seleccion, dni }); // Crea una nueva instancia de sorteo con los valores recibidos
+        const { correo, telefono } = req.body; // Asegúrate de obtener correctamente los valores
+        const nuevaSorteo = await sorteoDB.create({ correo, telefono }); // Crea una nueva instancia de sorteo con los valores recibidos
         res.status(201).json(nuevaSorteo);
     }catch (error){
         console.error(error);
