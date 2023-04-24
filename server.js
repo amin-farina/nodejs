@@ -13,7 +13,7 @@ app.use("/api", apiRoutes)
 
 db.authenticate()
 .then(() => {
-    return encuestaDB.sync({ force: true });
+    return encuestaDB.sync();
   })
 .then(() => {
     app.listen (3000);
