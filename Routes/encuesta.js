@@ -15,8 +15,8 @@ encuestaRoutes.get("/:id", async (req, res) => {
 
 encuestaRoutes.post("/create", async (req, res) => {
     try{
-        const { seleccion, nombre, partido, dni } = req.body; // Asegúrate de obtener correctamente los valores
-        const nuevaEncuesta = await encuestaDB.create({ seleccion, nombre, partido, dni }); // Crea una nueva instancia de Encuesta con los valores recibidos
+        const { seleccion, dni } = req.body; // Asegúrate de obtener correctamente los valores
+        const nuevaEncuesta = await encuestaDB.create({ seleccion, dni }); // Crea una nueva instancia de Encuesta con los valores recibidos
         res.status(201).json(nuevaEncuesta);
     }catch (error){
         console.error(error);

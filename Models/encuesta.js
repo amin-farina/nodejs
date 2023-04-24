@@ -10,12 +10,6 @@ const encuestaDB = db.define("encuesta", {
     "seleccion": {
         type: DataTypes.TEXT('tiny'),
     },
-    "nombre":{
-        type: DataTypes.TEXT('tiny'),
-    },
-    "partido":{
-        type: DataTypes.TEXT('tiny'),
-    },
     "dni":{
         type: DataTypes.TEXT('tiny'),
     }
