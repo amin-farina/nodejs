@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json());
 app.use("/api", apiRoutes)
 
-db.authenticate()
+db.authenticate({alter:true})
 .then(() => {
     return encuestaDB.sync({ force: true });
   })
