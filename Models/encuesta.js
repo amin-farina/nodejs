@@ -7,16 +7,16 @@ const encuestaDB = db.define("encuesta", {
         primaryKey: true
     },
     "seleccion": {
-        type: DataTypes.TEXT('tiny'),
-        defaultValue: "No Participo"
+        type: DataTypes.STRING(255),
+        defaultValue: 'No Participo'
     },
     "correo": {
-        type: DataTypes.TEXT('tiny'),
-        defaultValue: "No Participo"
+        type: DataTypes.STRING(255),
+        defaultValue: 'No Participo'
     },
     "telefono":{
-        type: DataTypes.TEXT('tiny'),
-        defaultValue: "No Participo"
+        type: DataTypes.STRING(255),
+        defaultValue: 'No Participo'
     }
 },
 {
