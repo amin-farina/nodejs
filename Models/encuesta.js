@@ -8,15 +8,15 @@ const encuestaDB = db.define("encuesta", {
     },
     "seleccion": {
         type: DataTypes.TEXT('tiny'),
-        defaultValue: null
+        defaultValue: "No Participo"
     },
     "correo": {
         type: DataTypes.TEXT('tiny'),
-        defaultValue: null
+        defaultValue: "No Participo"
     },
     "telefono":{
         type: DataTypes.TEXT('tiny'),
-        defaultValue: null
+        defaultValue: "No Participo"
     }
 },
 {
