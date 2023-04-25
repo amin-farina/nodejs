@@ -15,8 +15,8 @@ encuestaRoutes.get("/:dni", async (req, res) => {
 
 encuestaRoutes.post("/create", async (req, res) => {
     try{
-        const { seleccion, dni } = req.body; // Asegúrate de obtener correctamente los valores
-        const nuevaEncuesta = await encuestaDB.create({ seleccion, dni }); // Crea una nueva instancia de Encuesta con los valores recibidos
+        const { seleccion, dni, correo, telefono } = req.body; // Asegúrate de obtener correctamente los valores
+        const nuevaEncuesta = await encuestaDB.create({ seleccion, dni, correo, telefono }); // Crea una nueva instancia de Encuesta con los valores recibidos
         res.status(201).json(nuevaEncuesta);
     }catch (error){
         console.error(error);
@@ -24,16 +24,16 @@ encuestaRoutes.post("/create", async (req, res) => {
     }    
 });
 
-encuestaRoutes.put("/:id", async (req, res) => {
+encuestaRoutes.put("/:dni", async (req, res) => {
     const encuesta = await encuestaDB.update(req.body, {
-        where: { id: req.params.id }
+        where: { dni: req.params.dni }
     });
     res.json(encuesta);
 });
 
-encuestaRoutes.delete("/:id", async (req, res) => {
+encuestaRoutes.delete("/:dni", async (req, res) => {
     await encuestaDB.destroy({
-        where: { id: req.params.id }
+        where: { dni: req.params.dni }
     });
     res.json({ success: "Encuesta eliminada" });
 });
