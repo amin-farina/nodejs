@@ -8,8 +8,8 @@ encuestaRoutes.get("/", async (req, res) => {
     res.json(encuesta);
 });
 
-encuestaRoutes.get("/:id", async (req, res) => {
-    const encuesta = await encuestaDB.findByPk(req.params.id);
+encuestaRoutes.get("/:dni", async (req, res) => {
+    const encuesta = await encuestaDB.findByPk(req.params.dni);
     res.json(encuesta);
 })
 
