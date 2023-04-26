@@ -9,7 +9,7 @@ padronRoutes.get("/", async (req, res) => {
 });
 
 padronRoutes.get("/:id", async (req, res) => {
-    const padron = await padronDB.findByPk(req.params.id);
+    const padron = await padronDB.findByPk(req.params.DOCUMENTO);
     res.json(padron);
 })
 

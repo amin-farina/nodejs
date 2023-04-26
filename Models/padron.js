@@ -3,43 +3,43 @@ import db from "../db.js";
 
 
 const padronDB = db.define("padron", {
-    "NU_MATRICULA": {
-        type: DataTypes.DOUBLE,
+    "DOCUMENTO": {
+        type: DataTypes.TEXT('tiny'),
         primaryKey: true,
     },
-    "TX_GENERO": {
+    "APELLIDO":{
         type: DataTypes.TEXT('tiny'),
     },
-    "TX_APELLIDO":{
+    "NOMBRE":{
         type: DataTypes.TEXT('tiny'),
     },
-    "TX_NOMBRE":{
+    "TIPODOC":{
         type: DataTypes.TEXT('tiny'),
     },
-    "TX_TIPO_EJEMPLAR":{
+    "DOMIC":{
         type: DataTypes.TEXT('tiny'),
+    },
+    "SECCION":{
+        type: DataTypes.DATE,
     },
     "TX_CLASE":{
         type: DataTypes.TEXT('tiny'),
     },
-    "FC_FECHA_NACIMIENTO":{
+    "CIRCUITO":{
         type: DataTypes.DATE,
     },
-    "TX_DOMICILIO":{
+    "MESA":{
         type: DataTypes.TEXT('tiny'),
     },
-    "FC_FECHA_EJEMPLAR":{
-        type: DataTypes.DATE,
-    },
-    "TX_PROFESION":{
+    "ORDEN":{
         type: DataTypes.TEXT('tiny'),
     },
-    "TX_SECC_NUMERO":{
+    "CentrosVot":{
         type: DataTypes.TEXT('tiny'),
     },
-    "TX_CIRC_NUMERO":{
+    "Domicilio":{
         type: DataTypes.TEXT('tiny'),
-    },
+    }
 },
 {
     tableName:"Transformacion",
