@@ -20,13 +20,13 @@ const padronDB = db.define("padron", {
         type: DataTypes.TEXT('tiny'),
     },
     "SECCION":{
-        type: DataTypes.DATE,
+        type: DataTypes.TEXT('tiny'),
     },
     "TX_CLASE":{
         type: DataTypes.TEXT('tiny'),
     },
     "CIRCUITO":{
-        type: DataTypes.DATE,
+        type: DataTypes.TEXT('tiny'),
     },
     "MESA":{
         type: DataTypes.TEXT('tiny'),

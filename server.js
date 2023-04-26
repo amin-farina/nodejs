@@ -4,6 +4,7 @@ import db from './db.js';
 import apiRoutes from './Routes/index.js';
 import encuestaDB from './Models/encuesta.js';
 import cors from 'cors';
+import padronDB from './Models/padron.js';
 
 
 const app = express();
