@@ -26,7 +26,7 @@ encuestaRoutes.post("/create", async (req, res) => {
 
 encuestaRoutes.put("/:dni", async (req, res) => {
     const encuesta = await encuestaDB.update(req.body, {
-        where: { DOCUMENTO: req.params.dni }
+        where: { dni: req.params.dni }
     });
     res.json(encuesta);
 });
